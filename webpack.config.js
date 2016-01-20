@@ -13,8 +13,8 @@ module.exports = {
         loaders: [
             { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
             { test: /\.css$/, loader: "style!css" },
-            { test: /\.js$/, loader: "babel" },
-            { test: /\.less$/, loader: "style!css!less" }
+            { test: /.js?$/, loader: "babel-loader", query: { presets: ["es2015", "react"]}},
+            { test: /\.scss$/, loader: "style!css!sass" }
         ]
     },
     resolve: {
