@@ -1,4 +1,5 @@
 @import "src/mixins";
+@import "src/variables";
 
 nav {
     float: right;
@@ -9,10 +10,12 @@ nav {
 }
 
 .sidebar-component {
+    float:left;
+
     h3 {
         float:left;
         width:100%;
-        color:#109BE3;
+        color:$secondary-colour;
         margin-bottom:5px;
         font-size:14px;
         text-transform:uppercase;

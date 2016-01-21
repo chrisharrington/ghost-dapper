@@ -14,6 +14,7 @@ module.exports = {
             { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
             { test: /\.css$/, loader: "style!css" },
             { test: /.js?$/, loader: "babel-loader", query: { presets: ["es2015", "react"]}},
+            { test: /.json?$/, loader: "json" },
             { test: /\.scss$/, loader: "style!css!sass" }
         ]
     },
