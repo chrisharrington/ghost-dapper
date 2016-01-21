@@ -1,0 +1,9 @@
+@import "src/variables";
+@import "src/mixins";
+
+div.tweets {
+    float:left;
+    width:100%;
+    @include border-box;
+    padding:$spacing;
+}

@@ -5,6 +5,7 @@ import Config from "config";
 import Cache from "data/cache";
 
 import Profile from "./profile";
+import Tweets from "./tweets";
 
 let CACHE_KEY = "twitter-info";
 
@@ -21,6 +22,7 @@ export default class Twitter extends React.Component {
         return <div className="sidebar-component twitter">
             <h3>Twitter</h3>
             <Profile profile={this.state.profile} />
+            <Tweets tweets={this.state.tweets} />
         </div>;
     };
 

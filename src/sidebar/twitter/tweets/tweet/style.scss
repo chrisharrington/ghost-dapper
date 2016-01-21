@@ -1,0 +1,55 @@
+@import "src/variables";
+@import "src/mixins";
+
+div.tweet {
+    float:left;
+    width:100%;
+    margin-top:$spacing;
+
+    &:first-child {
+        margin-top:0;
+    }
+
+    span.content {
+        float:left;
+        width:100%;
+        font-size:13px;
+        margin-bottom:7px;
+    }
+
+    >div.date {
+        float:left;
+        font-size:10px;
+        font-style:italic;
+    }
+
+    >div.counts {
+        float:right;
+
+        >div {
+            float:right;
+            font-size:10px;
+
+            >span {
+                float:left;
+
+                &.fa {
+                    margin-right:5px;
+
+                    &.fa-retweet {
+                        font-size:12px;
+                    }
+
+                    &.fa-heart {
+                        font-size:11px;
+                        margin-top:1px;
+                    }
+                }
+
+                &.count {
+                    margin-right:12px;
+                }
+            }
+        }
+    }
+}

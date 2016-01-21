@@ -3,7 +3,8 @@
 
 div.twitter-profile {
     float:left;
-    padding:$spacing;
+    width:100%;
+    padding:$spacing $spacing 0 $spacing;
 
     img {
         float:left;

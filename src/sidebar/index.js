@@ -6,7 +6,7 @@ import "./style.scss";
 
 export default class Sidebar extends React.Component {
     render() {
-        return <nav>
+        return <nav className="sidebar-light">
             <Twitter />
             <RecentArticles />
         </nav>;

@@ -19798,7 +19798,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "nav",
-	                null,
+	                { className: "sidebar-light" },
 	                _react2.default.createElement(_twitter2.default, null),
 	                _react2.default.createElement(_recentArticles2.default, null)
 	            );
@@ -27848,7 +27848,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { className: "excerpt" },
+	                    { className: "excerpt sidebar-dark" },
 	                    article.excerpt
 	                )
 	            );
@@ -27896,7 +27896,7 @@
 
 
 	// module
-	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article:hover {\n    background-color: #464646; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.authour, div.article > span.authour {\n      font-size: 11px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 11px;\n      color: #969696; }\n  div.article div.authour span {\n    font-size: 11px; }\n    div.article div.authour span.name {\n      float: left; }\n    div.article div.authour span.date {\n      float: right; }\n", ""]);
+	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article:hover {\n    background-color: #464646; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.authour, div.article > span.authour {\n      font-size: 11px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 12px;\n      color: #a0a0a0;\n      font-style: italic; }\n  div.article div.authour span {\n    font-size: 11px; }\n    div.article div.authour span.name {\n      float: left; }\n    div.article div.authour span.date {\n      float: right; }\n", ""]);
 
 	// exports
 
@@ -28282,6 +28282,10 @@
 
 	var _profile2 = _interopRequireDefault(_profile);
 
+	var _tweets = __webpack_require__(286);
+
+	var _tweets2 = _interopRequireDefault(_tweets);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28318,7 +28322,8 @@
 	                    null,
 	                    "Twitter"
 	                ),
-	                _react2.default.createElement(_profile2.default, { profile: this.state.profile })
+	                _react2.default.createElement(_profile2.default, { profile: this.state.profile }),
+	                _react2.default.createElement(_tweets2.default, { tweets: this.state.tweets })
 	            );
 	        }
 	    }, {
@@ -38202,7 +38207,7 @@
 
 
 	// module
-	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  padding: 15px; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      text-decoration: underline;\n      font-size: 12px;\n      color: white !important; }\n", ""]);
+	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  width: 100%;\n  padding: 15px 15px 0 15px; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      text-decoration: underline;\n      font-size: 12px;\n      color: white !important; }\n", ""]);
 
 	// exports
 
@@ -38242,7 +38247,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: right;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n", ""]);
+	exports.push([module.id, "nav {\n  float: right;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: white; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n", ""]);
 
 	// exports
 
@@ -38372,6 +38377,361 @@
 
 	// exports
 
+
+/***/ },
+/* 286 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(161);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var _tweet = __webpack_require__(289);
+
+	var _tweet2 = _interopRequireDefault(_tweet);
+
+	__webpack_require__(287);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Tweets = function (_React$Component) {
+	    _inherits(Tweets, _React$Component);
+
+	    function Tweets() {
+	        _classCallCheck(this, Tweets);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Tweets).apply(this, arguments));
+	    }
+
+	    _createClass(Tweets, [{
+	        key: "render",
+	        value: function render() {
+	            var tweets = _lodash2.default.take(this.props.tweets, 5);
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "tweets" },
+	                _lodash2.default.map(tweets, function (tweet, i) {
+	                    return _react2.default.createElement(_tweet2.default, { key: i, tweet: tweet });
+	                })
+	            );
+	        }
+	    }]);
+
+	    return Tweets;
+	}(_react2.default.Component);
+
+	exports.default = Tweets;
+	;
+
+/***/ },
+/* 287 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(288);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 288 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "div.tweets {\n  float: left;\n  width: 100%;\n  box-sizing: border-box;\n  padding: 15px; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 289 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(161);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var _reactFontawesome = __webpack_require__(292);
+
+	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+	var _moment = __webpack_require__(178);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	__webpack_require__(290);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Tweets = function (_React$Component) {
+	    _inherits(Tweets, _React$Component);
+
+	    function Tweets() {
+	        _classCallCheck(this, Tweets);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Tweets).apply(this, arguments));
+	    }
+
+	    _createClass(Tweets, [{
+	        key: "render",
+	        value: function render() {
+	            var tweet = this.props.tweet;
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "tweet" },
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "content" },
+	                    tweet.html
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "counts sidebar-dark" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "icon" },
+	                        _react2.default.createElement(_reactFontawesome2.default, { name: "retweet" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "count" },
+	                            tweet.retweets
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "icon" },
+	                        _react2.default.createElement(_reactFontawesome2.default, { name: "heart" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "count" },
+	                            tweet.favourites
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "date sidebar-dark" },
+	                    (0, _moment2.default)(tweet.date).fromNow()
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Tweets;
+	}(_react2.default.Component);
+
+	exports.default = Tweets;
+	;
+
+/***/ },
+/* 290 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(291);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 291 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "div.tweet {\n  float: left;\n  width: 100%;\n  margin-top: 15px; }\n  div.tweet:first-child {\n    margin-top: 0; }\n  div.tweet span.content {\n    float: left;\n    width: 100%;\n    font-size: 13px;\n    margin-bottom: 7px; }\n  div.tweet > div.date {\n    float: left;\n    font-size: 10px;\n    font-style: italic; }\n  div.tweet > div.counts {\n    float: right; }\n    div.tweet > div.counts > div {\n      float: right;\n      font-size: 10px; }\n      div.tweet > div.counts > div > span {\n        float: left; }\n        div.tweet > div.counts > div > span.fa {\n          margin-right: 5px; }\n          div.tweet > div.counts > div > span.fa.fa-retweet {\n            font-size: 12px; }\n          div.tweet > div.counts > div > span.fa.fa-heart {\n            font-size: 11px;\n            margin-top: 1px; }\n        div.tweet > div.counts > div > span.count {\n          margin-right: 12px; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 292 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
+	      }
+	    }
+	  }return target;
+	};
+
+	function _interopRequireDefault(obj) {
+	  return obj && obj.__esModule ? obj : { 'default': obj };
+	}
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	/**
+	 * A React component for the font-awesome icon library.
+	 *
+	 *
+	 * @param {Boolean} [border=false] Whether or not to show a border radius
+	 * @param {String} [className] An extra set of CSS classes to add to the component
+	 * @param {Boolean} [fixedWidth=false] Make buttons fixed width
+	 * @param {String} [flip=false] Flip the icon's orientation.
+	 * @param {Boolean} [inverse=false]Inverse the icon's color
+	 * @param {String} name Name of the icon to use
+	 * @param {Boolean} [pulse=false] Rotate icon with 8 steps (rather than smoothly)
+	 * @param {Number} [rotate] The degress to rotate the icon by
+	 * @param {String} [size] The icon scaling size
+	 * @param {Boolean} [spin=false] Spin the icon
+	 * @param {String} [stack] Stack an icon on top of another
+	 * @module FontAwesome
+	 * @type {ReactClass}
+	 */
+	exports['default'] = _react2['default'].createClass({
+
+	  displayName: 'FontAwesome',
+
+	  propTypes: {
+	    border: _react2['default'].PropTypes.bool,
+	    className: _react2['default'].PropTypes.string,
+	    fixedWidth: _react2['default'].PropTypes.bool,
+	    flip: _react2['default'].PropTypes.oneOf(['horizontal', 'vertical']),
+	    inverse: _react2['default'].PropTypes.bool,
+	    name: _react2['default'].PropTypes.string.isRequired,
+	    pulse: _react2['default'].PropTypes.bool,
+	    rotate: _react2['default'].PropTypes.oneOf([90, 180, 270]),
+	    size: _react2['default'].PropTypes.oneOf(['lg', '2x', '3x', '4x', '5x']),
+	    spin: _react2['default'].PropTypes.bool,
+	    stack: _react2['default'].PropTypes.oneOf(['1x', '2x'])
+	  },
+
+	  render: function render() {
+	    var className = 'fa fa-' + this.props.name;
+
+	    if (this.props.size) {
+	      className += ' fa-' + this.props.size;
+	    }
+
+	    if (this.props.spin) {
+	      className += ' fa-spin';
+	    }
+
+	    if (this.props.pulse) {
+	      className += ' fa-pulse';
+	    }
+
+	    if (this.props.border) {
+	      className += ' fa-border';
+	    }
+
+	    if (this.props.fixedWidth) {
+	      className += ' fa-fw';
+	    }
+
+	    if (this.props.inverse) {
+	      className += ' fa-inverse';
+	    }
+
+	    if (this.props.flip) {
+	      className += ' fa-flip-' + this.props.flip;
+	    }
+
+	    if (this.props.rotate) {
+	      className += ' fa-rotate-' + this.props.rotate;
+	    }
+
+	    if (this.props.stack) {
+	      className += ' fa-stack-' + this.props.stack;
+	    }
+
+	    if (this.props.className) {
+	      className += ' ' + this.props.className;
+	    }
+
+	    return _react2['default'].createElement('span', _extends({}, this.props, {
+	      className: className
+	    }));
+	  }
+	});
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);
