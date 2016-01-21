@@ -19857,6 +19857,7 @@
 	    _createClass(RecentArticles, [{
 	        key: "render",
 	        value: function render() {
+	            var topFivePosts = _lodash2.default.take(posts, 5);
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "sidebar-component recent-articles" },
@@ -19865,7 +19866,7 @@
 	                    null,
 	                    "Recent Articles"
 	                ),
-	                _lodash2.default.map(posts, function (post, i) {
+	                _lodash2.default.map(topFivePosts, function (post, i) {
 	                    return _react2.default.createElement(_article2.default, { key: i, article: post });
 	                })
 	            );
@@ -38247,7 +38248,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: right;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: white; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n", ""]);
+	exports.push([module.id, "nav {\n  float: right;\n  width: 400px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: white; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n", ""]);
 
 	// exports
 
