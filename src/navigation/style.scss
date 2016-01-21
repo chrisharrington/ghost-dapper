@@ -1,5 +1,9 @@
+@import "src/mixins";
+
 nav {
     float: left;
     width: 300px;
     background: rgb(50, 50, 50);
+    color: rgb(220, 220, 220);
+    @include border-box;
 }

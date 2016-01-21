@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Navigation from "./navigation";
 import Header from "./header";
 
+import "./mixins.scss";
 import "./style.scss";
 
 class Index extends React.Component {

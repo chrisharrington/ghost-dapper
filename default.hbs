@@ -32,6 +32,22 @@
 
     </div> -->
 
+    <script type="text/javascript">
+        var posts = [];
+        {{#foreach posts}}
+            posts.push({
+                url: "{{url}}",
+                title: "{{title}}",
+                excerpt: "{{excerpt words="26"}}...",
+                authour: {
+                    image: "{{author.image}}",
+                    name: "{{author.name}}"
+                },
+                date: "{{date format="DD MMMM YYYY"}}"
+            });
+        {{/foreach}}
+    </script>
+
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "San Francisco";
+  src: url("../fonts/San Francisco Regular.ttf") format("truetype");
+}
+
 body {
     margin:0;
+    font-family:"San Francisco";
 }

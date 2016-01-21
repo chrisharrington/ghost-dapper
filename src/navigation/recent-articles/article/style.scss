@@ -1,0 +1,54 @@
+@import "src/mixins";
+
+div.article {
+    float:left;
+    width:100%;
+    cursor:pointer;
+    padding:15px;
+    @include border-box;
+
+    &:first-child {
+        margin-top:0;
+    }
+
+    &:hover {
+        background-color:rgb(70, 70, 70);
+    }
+
+    >div, >span {
+        float:left;
+        width:100%;
+        margin-top:8px;
+
+        &:first-child {
+            margin-top:0;
+        }
+
+        &.title {
+            font-size:18px;
+        }
+
+        &.authour {
+            font-size:11px;
+        }
+
+        &.excerpt {
+            font-size:11px;
+            color:rgb(150, 150, 150);
+        }
+    }
+
+    div.authour {
+        span {
+            font-size:11px;
+
+            &.name {
+                float:left;
+            }
+
+            &.date {
+                float:right;
+            }
+        }
+    }
+}
