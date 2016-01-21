@@ -10,7 +10,7 @@ export default class Profile extends React.Component {
             <div>
                 <span className="name">{profile.name}</span>
                 <br />
-                <a className="screenName">{profile.screenName}</a>
+                <a className="screenName" href={"http://twitter.com/" + profile.screenName} target="_blank">{profile.screenName}</a>
             </div>
         </div>;
     }

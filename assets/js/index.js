@@ -60,13 +60,13 @@
 
 	var _sidebar2 = _interopRequireDefault(_sidebar);
 
-	var _header = __webpack_require__(279);
+	var _header = __webpack_require__(281);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	__webpack_require__(280);
-
 	__webpack_require__(282);
+
+	__webpack_require__(284);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19774,7 +19774,7 @@
 
 	var _twitter2 = _interopRequireDefault(_twitter);
 
-	__webpack_require__(277);
+	__webpack_require__(279);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38115,7 +38115,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(284);
+	__webpack_require__(277);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38153,7 +38153,7 @@
 	                    _react2.default.createElement("br", null),
 	                    _react2.default.createElement(
 	                        "a",
-	                        { className: "screenName" },
+	                        { className: "screenName", href: "http://twitter.com/" + profile.screenName, target: "_blank" },
 	                        profile.screenName
 	                    )
 	                )
@@ -38183,8 +38183,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./style.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -38202,13 +38202,53 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: right;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n", ""]);
+	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  padding: 15px; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      text-decoration: underline;\n      font-size: 12px;\n      color: white !important; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(280);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "nav {\n  float: right;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38254,13 +38294,13 @@
 	;
 
 /***/ },
-/* 280 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(281);
+	var content = __webpack_require__(283);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(169)(content, {});
@@ -38280,46 +38320,6 @@
 	}
 
 /***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(168)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(283);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(169)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
 /* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -38328,7 +38328,7 @@
 
 
 	// module
-	exports.push([module.id, "div.wrapper {\n  width: 100%;\n  background: white;\n  height: 100%; }\n", ""]);
+	exports.push([module.id, "", ""]);
 
 	// exports
 
@@ -38349,8 +38349,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -38368,7 +38368,7 @@
 
 
 	// module
-	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  padding: 15px; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      text-decoration: underline;\n      font-size: 12px; }\n", ""]);
+	exports.push([module.id, "div.wrapper {\n  width: 100%;\n  background: white;\n  height: 100%; }\n", ""]);
 
 	// exports
 
