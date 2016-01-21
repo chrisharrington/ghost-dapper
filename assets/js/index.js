@@ -19854,7 +19854,12 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "recent-articles" },
+	                { className: "sidebar-component recent-articles" },
+	                _react2.default.createElement(
+	                    "h3",
+	                    null,
+	                    "Recent Articles"
+	                ),
 	                _lodash2.default.map(posts, function (post, i) {
 	                    return _react2.default.createElement(_article2.default, { key: i, article: post });
 	                })
@@ -28275,7 +28280,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: left;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n", ""]);
+	exports.push([module.id, "nav {\n  float: left;\n  width: 300px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component h3 {\n  float: left;\n  width: 100%;\n  color: #109BE3;\n  margin-bottom: 5px;\n  font-size: 14px;\n  text-transform: uppercase;\n  letter-spacing: 1.3px;\n  padding: 0 15px;\n  box-sizing: border-box; }\n", ""]);
 
 	// exports
 
