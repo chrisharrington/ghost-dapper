@@ -3,7 +3,7 @@ import RecentArticles from "./recent-articles";
 
 import "./style.scss";
 
-export default class Navigation extends React.Component {
+export default class Sidebar extends React.Component {
     render() {
         return <nav>
             <RecentArticles />

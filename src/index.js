@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Navigation from "./navigation";
+import Sidebar from "./sidebar";
 import Header from "./header";
 
 import "./mixins.scss";
@@ -10,7 +10,7 @@ import "./style.scss";
 class Index extends React.Component {
     render() {
         return <div className="wrapper">
-            <Navigation />
+            <Sidebar />
             <Header />
         </div>;
     }
