@@ -27809,6 +27809,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _moment = __webpack_require__(178);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
 	__webpack_require__(166);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27842,15 +27846,22 @@
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { className: "authour" },
-	                    article.authour.name,
-	                    " - ",
-	                    article.date
+	                    { className: "excerpt" },
+	                    article.excerpt
 	                ),
 	                _react2.default.createElement(
-	                    "span",
-	                    { className: "excerpt sidebar-dark" },
-	                    article.excerpt
+	                    "div",
+	                    { className: "authour-info sidebar-dark" },
+	                    _react2.default.createElement(
+	                        "span",
+	                        { className: "date" },
+	                        (0, _moment2.default)(article.date, "DD MMMM YYYY").fromNow()
+	                    ),
+	                    _react2.default.createElement(
+	                        "span",
+	                        { className: "name" },
+	                        article.authour.name
+	                    )
 	                )
 	            );
 	        }
@@ -27897,7 +27908,7 @@
 
 
 	// module
-	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article:hover {\n    background-color: #464646; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.authour, div.article > span.authour {\n      font-size: 11px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 12px;\n      color: #a0a0a0;\n      font-style: italic; }\n  div.article div.authour span {\n    font-size: 11px; }\n    div.article div.authour span.name {\n      float: left; }\n    div.article div.authour span.date {\n      float: right; }\n", ""]);
+	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article:hover {\n    background-color: #464646; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 12px; }\n  div.article div.authour-info span {\n    font-size: 11px; }\n    div.article div.authour-info span.name {\n      float: right; }\n    div.article div.authour-info span.date {\n      float: left;\n      font-style: italic; }\n", ""]);
 
 	// exports
 
