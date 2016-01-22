@@ -10,7 +10,7 @@ export default class Tweets extends React.Component {
         var tweet = this.props.tweet;
         return <div className="tweet">
             <span className="content">{tweet.html}</span>
-            <div className="counts sidebar-dark">
+            <div className="counts">
                 <div className="icon">
                     <FontAwesome name="retweet" />
                     <span className="count">{tweet.retweets}</span>

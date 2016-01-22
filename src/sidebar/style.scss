@@ -32,3 +32,11 @@ nav {
 .sidebar-dark {
     color:rgb(160, 160, 160);
 }
+
+.sidebar-selectable {
+    cursor:pointer;
+
+    &:hover {
+        background-color:rgb(70, 70, 70);
+    }
+}

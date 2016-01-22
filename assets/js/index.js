@@ -19774,6 +19774,10 @@
 
 	var _twitter2 = _interopRequireDefault(_twitter);
 
+	var _github = __webpack_require__(293);
+
+	var _github2 = _interopRequireDefault(_github);
+
 	__webpack_require__(279);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -19799,8 +19803,9 @@
 	            return _react2.default.createElement(
 	                "nav",
 	                { className: "sidebar-light" },
+	                _react2.default.createElement(_recentArticles2.default, null),
 	                _react2.default.createElement(_twitter2.default, null),
-	                _react2.default.createElement(_recentArticles2.default, null)
+	                _react2.default.createElement(_github2.default, null)
 	            );
 	        }
 	    }]);
@@ -27838,7 +27843,7 @@
 	            var article = this.props.article;
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "article" },
+	                { className: "article sidebar-selectable" },
 	                _react2.default.createElement(
 	                    "span",
 	                    { className: "title" },
@@ -27908,7 +27913,7 @@
 
 
 	// module
-	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article:hover {\n    background-color: #464646; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 12px; }\n  div.article div.authour-info span {\n    font-size: 11px; }\n    div.article div.authour-info span.name {\n      float: right; }\n    div.article div.authour-info span.date {\n      float: left;\n      font-style: italic; }\n", ""]);
+	exports.push([module.id, "div.article {\n  float: left;\n  width: 100%;\n  cursor: pointer;\n  padding: 15px;\n  box-sizing: border-box; }\n  div.article:first-child {\n    margin-top: 0; }\n  div.article > div, div.article > span {\n    float: left;\n    width: 100%;\n    margin-top: 8px; }\n    div.article > div:first-child, div.article > span:first-child {\n      margin-top: 0; }\n    div.article > div.title, div.article > span.title {\n      font-size: 18px; }\n    div.article > div.excerpt, div.article > span.excerpt {\n      font-size: 12px; }\n  div.article div.authour-info span {\n    font-size: 11px; }\n    div.article div.authour-info span.name {\n      float: right; }\n    div.article div.authour-info span.date {\n      float: left;\n      font-style: italic; }\n", ""]);
 
 	// exports
 
@@ -38170,8 +38175,8 @@
 	                    _react2.default.createElement("br", null),
 	                    _react2.default.createElement(
 	                        "a",
-	                        { className: "screenName", href: "http://twitter.com/" + profile.screenName, target: "_blank" },
-	                        profile.screenName
+	                        { className: "screenName sidebar-dark", href: "http://twitter.com/" + profile.screenName, target: "_blank" },
+	                        "@" + profile.screenName
 	                    )
 	                )
 	            );
@@ -38219,7 +38224,7 @@
 
 
 	// module
-	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  width: 100%;\n  padding: 15px 15px 0 15px; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      text-decoration: underline;\n      font-size: 12px;\n      color: white !important; }\n", ""]);
+	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  width: 100%;\n  padding: 15px 15px 0 15px;\n  box-sizing: border-box; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      font-size: 12px;\n      text-decoration: none; }\n      div.twitter-profile > div > a.screenName:hover {\n        text-decoration: underline; }\n", ""]);
 
 	// exports
 
@@ -38259,7 +38264,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: right;\n  width: 400px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: white; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n", ""]);
+	exports.push([module.id, "nav {\n  float: right;\n  width: 400px;\n  background: #323232;\n  color: gainsboro;\n  box-sizing: border-box; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 1.3px;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: white; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n\n.sidebar-selectable {\n  cursor: pointer; }\n  .sidebar-selectable:hover {\n    background-color: #464646; }\n", ""]);
 
 	// exports
 
@@ -38554,7 +38559,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "counts sidebar-dark" },
+	                    { className: "counts" },
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "icon" },
@@ -38626,7 +38631,7 @@
 
 
 	// module
-	exports.push([module.id, "div.tweet {\n  float: left;\n  width: 100%;\n  margin-top: 15px; }\n  div.tweet:first-child {\n    margin-top: 0; }\n  div.tweet span.content {\n    float: left;\n    width: 100%;\n    font-size: 13px;\n    margin-bottom: 7px; }\n  div.tweet > div.date {\n    float: left;\n    font-size: 10px;\n    font-style: italic; }\n  div.tweet > div.counts {\n    float: right; }\n    div.tweet > div.counts > div {\n      float: right;\n      font-size: 10px; }\n      div.tweet > div.counts > div > span {\n        float: left; }\n        div.tweet > div.counts > div > span.fa {\n          margin-right: 5px; }\n          div.tweet > div.counts > div > span.fa.fa-retweet {\n            font-size: 12px; }\n          div.tweet > div.counts > div > span.fa.fa-heart {\n            font-size: 11px;\n            margin-top: 1px; }\n        div.tweet > div.counts > div > span.count {\n          margin-right: 12px; }\n", ""]);
+	exports.push([module.id, "div.tweet {\n  float: left;\n  width: 100%;\n  margin-top: 15px; }\n  div.tweet:first-child {\n    margin-top: 0; }\n  div.tweet span.content {\n    float: left;\n    width: 100%;\n    font-size: 13px;\n    margin-bottom: 7px; }\n  div.tweet > div.date {\n    float: left;\n    font-size: 11px;\n    font-style: italic; }\n  div.tweet > div.counts {\n    float: right; }\n    div.tweet > div.counts > div {\n      float: right;\n      font-size: 12px; }\n      div.tweet > div.counts > div > span {\n        float: left; }\n        div.tweet > div.counts > div > span.fa {\n          margin-right: 5px; }\n          div.tweet > div.counts > div > span.fa.fa-retweet {\n            font-size: 15px;\n            color: #599635; }\n          div.tweet > div.counts > div > span.fa.fa-heart {\n            font-size: 13px;\n            margin-top: 1px;\n            color: #db003a; }\n        div.tweet > div.counts > div > span.count {\n          margin-right: 12px; }\n", ""]);
 
 	// exports
 
@@ -38744,6 +38749,362 @@
 	  }
 	});
 	module.exports = exports['default'];
+
+/***/ },
+/* 293 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ajax = __webpack_require__(173);
+
+	var _ajax2 = _interopRequireDefault(_ajax);
+
+	var _cache = __webpack_require__(177);
+
+	var _cache2 = _interopRequireDefault(_cache);
+
+	var _config = __webpack_require__(176);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	var _repos = __webpack_require__(296);
+
+	var _repos2 = _interopRequireDefault(_repos);
+
+	__webpack_require__(294);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var CACHE_KEY = "github-info";
+
+	var GitHub = function (_React$Component) {
+	    _inherits(GitHub, _React$Component);
+
+	    function GitHub() {
+	        _classCallCheck(this, GitHub);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(GitHub).call(this));
+
+	        _this.state = {
+	            repos: []
+	        };
+	        return _this;
+	    }
+
+	    _createClass(GitHub, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "sidebar-component github" },
+	                _react2.default.createElement(
+	                    "h3",
+	                    null,
+	                    "GitHub"
+	                ),
+	                _react2.default.createElement(_repos2.default, { repos: this.state.repos })
+	            );
+	        }
+	    }, {
+	        key: "componentDidMount",
+	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            this.getGitHubInfo().then(function (repos) {
+	                return _this2.setState({ repos: repos });
+	            });
+	        }
+	    }, {
+	        key: "getGitHubInfo",
+	        value: function getGitHubInfo() {
+	            return _cache2.default.get(CACHE_KEY) || _ajax2.default.get(_config2.default.serviceLocation + "github").then(function (repos) {
+	                _cache2.default.set(CACHE_KEY, repos);
+	                return repos;
+	            });
+	        }
+	    }]);
+
+	    return GitHub;
+	}(_react2.default.Component);
+
+	exports.default = GitHub;
+	;
+
+/***/ },
+/* 294 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(295);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 295 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 296 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _lodash = __webpack_require__(161);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var _repo = __webpack_require__(299);
+
+	var _repo2 = _interopRequireDefault(_repo);
+
+	__webpack_require__(297);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Repos = function (_React$Component) {
+	    _inherits(Repos, _React$Component);
+
+	    function Repos() {
+	        _classCallCheck(this, Repos);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Repos).apply(this, arguments));
+	    }
+
+	    _createClass(Repos, [{
+	        key: "render",
+	        value: function render() {
+	            var repos = _lodash2.default.take(this.props.repos, 5);
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "repos" },
+	                _lodash2.default.map(repos, function (repo, i) {
+	                    return _react2.default.createElement(_repo2.default, { key: i, repo: repo });
+	                })
+	            );
+	        }
+	    }]);
+
+	    return Repos;
+	}(_react2.default.Component);
+
+	exports.default = Repos;
+	;
+
+/***/ },
+/* 297 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(298);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 299 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactFontawesome = __webpack_require__(292);
+
+	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+	var _moment = __webpack_require__(178);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	__webpack_require__(300);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Repo = function (_React$Component) {
+	    _inherits(Repo, _React$Component);
+
+	    function Repo() {
+	        _classCallCheck(this, Repo);
+
+	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Repo).apply(this, arguments));
+	    }
+
+	    _createClass(Repo, [{
+	        key: "render",
+	        value: function render() {
+	            var repo = this.props.repo;
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "repo" },
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "name" },
+	                    repo.name
+	                ),
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "stars" },
+	                    repo.starCount
+	                ),
+	                _react2.default.createElement(_reactFontawesome2.default, { name: "star" }),
+	                _react2.default.createElement(
+	                    "a",
+	                    { href: repo.url, className: "sidebar-dark", target: "_blank" },
+	                    repo.url
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Repo;
+	}(_react2.default.Component);
+
+	exports.default = Repo;
+	;
+
+/***/ },
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(301);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(169)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../../node_modules/css-loader/index.js!./../../../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(168)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "div.repo {\n  padding: 15px;\n  float: left;\n  width: 100%;\n  box-sizing: border-box; }\n  div.repo .name {\n    float: left; }\n  div.repo .stars, div.repo .fa {\n    float: right;\n    font-size: 12px;\n    margin-left: 5px; }\n  div.repo .fa {\n    color: #FFD700;\n    margin-top: 2px; }\n  div.repo a {\n    float: left;\n    width: 100%;\n    margin-top: 3px;\n    font-size: 12px;\n    font-style: italic;\n    text-decoration: none; }\n    div.repo a:hover {\n      text-decoration: underline; }\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

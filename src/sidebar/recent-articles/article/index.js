@@ -7,7 +7,7 @@ import "./style.scss";
 export default class Article extends React.Component {
     render() {
         var article = this.props.article;
-        return <div className="article">
+        return <div className="article sidebar-selectable">
             <span className="title">{article.title}</span>
             <span className="excerpt">{article.excerpt}</span>
             <div className="authour-info sidebar-dark">

@@ -5,6 +5,7 @@ div.twitter-profile {
     float:left;
     width:100%;
     padding:$spacing $spacing 0 $spacing;
+    @include border-box;
 
     img {
         float:left;
@@ -25,9 +26,12 @@ div.twitter-profile {
         }
 
         >a.screenName {
-            text-decoration:underline;
             font-size:12px;
-            color:white !important;
+            text-decoration:none;
+
+            &:hover {
+                text-decoration:underline;
+            }
         }
     }
 }

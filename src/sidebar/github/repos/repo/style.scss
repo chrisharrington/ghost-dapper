@@ -1,0 +1,37 @@
+@import "src/mixins";
+@import "src/variables";
+
+div.repo {
+    padding:$spacing;
+    float:left;
+    width:100%;
+    @include border-box;
+
+    .name {
+        float:left;
+    }
+
+    .stars, .fa {
+        float:right;
+        font-size:12px;
+        margin-left:5px;
+    }
+
+    .fa {
+        color:#FFD700;
+        margin-top:2px;
+    }
+
+    a {
+        float:left;
+        width:100%;
+        margin-top:3px;
+        font-size:12px;
+        font-style:italic;
+        text-decoration:none;
+
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+}
