@@ -20,7 +20,7 @@ export default class Tweets extends React.Component {
                     <span className="count">{tweet.favourites}</span>
                 </div>
             </div>
-            <div className="date sidebar-dark">{moment(tweet.date).fromNow()}</div>
+            <div className="date sidebar-dark">{moment(tweet.date, "--- MMM DD HH:m:s Z YYYY").fromNow()}</div>
         </div>;
-    }
+    };
 };

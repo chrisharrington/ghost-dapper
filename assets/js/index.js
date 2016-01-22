@@ -38568,7 +38568,7 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "date sidebar-dark" },
-	                    (0, _moment2.default)(tweet.date).fromNow()
+	                    (0, _moment2.default)(tweet.date, "--- MMM DD HH:m:s Z YYYY").fromNow()
 	                )
 	            );
 	        }
