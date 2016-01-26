@@ -5,3 +5,10 @@
 @mixin border-radius($radius) {
     border-radius:$radius;
 }
+
+@mixin vertical-centre($height) {
+    line-height:$height;
+    height:$height;
+    vertical-align:middle;
+    display:inline-block;
+}

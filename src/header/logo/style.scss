@@ -1,0 +1,17 @@
+@import "src/mixins";
+@import "src/variables";
+
+div.logo {
+    float:left;
+
+    span {
+        float:left;
+        font-size:32px;
+        text-transform:uppercase;
+        font-weight:bold;
+
+        &.first {
+            color:$secondary-colour;
+        }
+    }
+}

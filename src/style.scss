@@ -1,5 +1,14 @@
+@import "src/variables";
+@import "src/mixins";
+
 div.wrapper {
     width:100%;
     background:white;
     height:100%;
+}
+
+main {
+    float:left;
+    width:calc(100% - #{$sidebar-width});
+    background:white;
 }

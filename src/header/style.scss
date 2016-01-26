@@ -1,3 +1,10 @@
+@import "src/variables";
+@import "src/mixins";
+
 header {
-    
+    float:left;
+    width:100%;
+    height:$header-height;
+    padding:$spacing;
+    @include border-box;
 }
