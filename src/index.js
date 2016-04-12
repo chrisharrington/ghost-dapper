@@ -10,9 +10,10 @@ import "./style.scss";
 class Index extends React.Component {
     render() {
         return <div className="wrapper">
+            <Header />
             <Sidebar />
             <main>
-                <Header />
+
             </main>
         </div>;
     }
