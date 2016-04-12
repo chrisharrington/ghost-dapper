@@ -39404,6 +39404,11 @@
 	                        { className: "screenName sidebar-dark", href: "http://twitter.com/" + profile.screenName, target: "_blank" },
 	                        "@" + profile.screenName
 	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "a",
+	                    { className: "follow-me", href: "http://twitter.com/" + profile.screenName, target: "_blank" },
+	                    "Follow"
 	                )
 	            );
 	        }
@@ -39450,7 +39455,7 @@
 
 
 	// module
-	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  width: 100%;\n  padding: 15px 15px 0 15px;\n  box-sizing: border-box; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      font-size: 12px;\n      text-decoration: none; }\n      div.twitter-profile > div > a.screenName:hover {\n        text-decoration: underline; }\n", ""]);
+	exports.push([module.id, "div.twitter-profile {\n  float: left;\n  width: 100%;\n  padding: 15px 15px 0 15px;\n  box-sizing: border-box; }\n  div.twitter-profile img {\n    float: left;\n    width: 50px;\n    height: 50px;\n    border-radius: 10px;\n    border: solid 1px #555; }\n  div.twitter-profile > div {\n    float: left;\n    margin-top: 7px;\n    margin-left: 10px; }\n    div.twitter-profile > div > span.name {\n      font-weight: bold;\n      font-size: 16px; }\n    div.twitter-profile > div > a.screenName {\n      font-size: 12px;\n      text-decoration: none; }\n      div.twitter-profile > div > a.screenName:hover {\n        text-decoration: underline; }\n  div.twitter-profile a.follow-me {\n    float: right;\n    padding: 6px 12px;\n    background: #109BE3;\n    color: white;\n    border-radius: 3px;\n    cursor: pointer;\n    border: none;\n    min-width: 80px;\n    margin-top: 12px;\n    text-decoration: none;\n    text-align: center;\n    font-size: 14px; }\n    div.twitter-profile a.follow-me:active {\n      background: #0e8bcb; }\n", ""]);
 
 	// exports
 

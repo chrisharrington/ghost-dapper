@@ -34,4 +34,23 @@ div.twitter-profile {
             }
         }
     }
+
+    a.follow-me {
+        float:right;
+        padding:6px 12px;
+        background:$secondary-colour;
+        color:white;
+        @include border-radius(3px);
+        cursor:pointer;
+        border:none;
+        min-width:80px;
+        margin-top:12px;
+        text-decoration:none;
+        text-align:center;
+        font-size:14px;
+
+        &:active {
+            background:darken($secondary-colour, 5%);
+        }
+    }
 }

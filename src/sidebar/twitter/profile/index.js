@@ -12,6 +12,7 @@ export default class Profile extends React.Component {
                 <br />
                 <a className="screenName sidebar-dark" href={"http://twitter.com/" + profile.screenName} target="_blank">{"@" + profile.screenName}</a>
             </div>
+            <a className="follow-me" href={"http://twitter.com/" + profile.screenName} target="_blank">Follow</a>
         </div>;
     }
 };
