@@ -39765,7 +39765,7 @@
 
 
 	// module
-	exports.push([module.id, "div.tweet {\n  float: left;\n  width: 100%;\n  margin-top: 15px; }\n  div.tweet:first-child {\n    margin-top: 0; }\n  div.tweet span.content {\n    float: left;\n    width: 100%;\n    font-size: 13px;\n    margin-bottom: 7px; }\n  div.tweet > div.date {\n    float: left;\n    font-size: 11px;\n    font-style: italic; }\n  div.tweet > div.counts {\n    float: right; }\n    div.tweet > div.counts > div {\n      float: right;\n      font-size: 12px; }\n      div.tweet > div.counts > div > span {\n        float: left; }\n        div.tweet > div.counts > div > span.fa {\n          margin-right: 5px; }\n          div.tweet > div.counts > div > span.fa.fa-retweet {\n            font-size: 15px;\n            color: #599635; }\n          div.tweet > div.counts > div > span.fa.fa-heart {\n            font-size: 13px;\n            margin-top: 1px;\n            color: #db003a; }\n        div.tweet > div.counts > div > span.count {\n          margin-right: 12px; }\n", ""]);
+	exports.push([module.id, "div.tweet {\n  float: left;\n  width: 100%;\n  margin-top: 15px; }\n  div.tweet:first-child {\n    margin-top: 0; }\n  div.tweet span.content {\n    float: left;\n    width: 100%;\n    font-size: 13px;\n    margin-bottom: 7px; }\n  div.tweet > div.date {\n    float: left;\n    font-size: 11px;\n    font-style: italic; }\n  div.tweet > div.counts {\n    float: right; }\n    div.tweet > div.counts > div {\n      float: right;\n      font-size: 12px; }\n      div.tweet > div.counts > div > span {\n        float: left; }\n        div.tweet > div.counts > div > span.fa {\n          margin-right: 5px; }\n          div.tweet > div.counts > div > span.fa.fa-retweet {\n            font-size: 15px;\n            color: #599635; }\n          div.tweet > div.counts > div > span.fa.fa-heart {\n            font-size: 13px;\n            margin-top: 1px;\n            color: #D1456A; }\n        div.tweet > div.counts > div > span.count {\n          margin-right: 12px;\n          margin-top: 1px; }\n", ""]);
 
 	// exports
 
@@ -40081,7 +40081,7 @@
 
 
 	// module
-	exports.push([module.id, "div.repo {\n  padding: 15px;\n  float: left;\n  width: 100%;\n  box-sizing: border-box; }\n  div.repo .name {\n    float: left; }\n  div.repo .stars, div.repo .fa {\n    float: right;\n    font-size: 12px;\n    margin-left: 5px; }\n  div.repo .fa {\n    color: #FFD700;\n    margin-top: 2px; }\n  div.repo a {\n    float: left;\n    width: 100%;\n    margin-top: 3px;\n    font-size: 12px;\n    font-style: italic;\n    text-decoration: none; }\n    div.repo a:hover {\n      text-decoration: underline; }\n", ""]);
+	exports.push([module.id, "div.repo {\n  padding: 15px;\n  float: left;\n  width: 100%;\n  box-sizing: border-box; }\n  div.repo .name {\n    float: left; }\n  div.repo .stars, div.repo .fa {\n    float: right;\n    font-size: 12px;\n    margin-left: 5px; }\n  div.repo .fa {\n    color: #FFD700;\n    margin-top: 1px; }\n  div.repo a {\n    float: left;\n    width: 100%;\n    margin-top: 3px;\n    font-size: 12px;\n    font-style: italic;\n    text-decoration: none; }\n    div.repo a:hover {\n      text-decoration: underline; }\n", ""]);
 
 	// exports
 
@@ -40201,7 +40201,7 @@
 
 
 	// module
-	exports.push([module.id, "nav {\n  float: right;\n  width: 400px;\n  color: gainsboro;\n  box-sizing: border-box;\n  background: #222933;\n  font-family: Arial; }\n\n.sidebar-component {\n  float: left; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 0 15px;\n    box-sizing: border-box; }\n\n.sidebar-light {\n  color: #E0E0E0; }\n\n.sidebar-dark {\n  color: #a0a0a0; }\n\n.sidebar-selectable {\n  cursor: pointer; }\n  .sidebar-selectable:hover {\n    background-color: #464646; }\n", ""]);
+	exports.push([module.id, "nav {\n  float: right;\n  width: 400px;\n  color: gainsboro;\n  box-sizing: border-box;\n  background: #222933;\n  font-family: Arial; }\n\n.sidebar-component {\n  float: left;\n  border-top: solid 1px #364252; }\n  .sidebar-component h3 {\n    float: left;\n    width: 100%;\n    color: #109BE3;\n    margin-bottom: 5px;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 0 15px;\n    box-sizing: border-box;\n    font-family: 'San Francisco'; }\n\n.sidebar-light {\n  color: #E0E0E0; }\n\n.sidebar-dark {\n  color: #6b7f9c; }\n\n.sidebar-selectable {\n  cursor: pointer; }\n  .sidebar-selectable:hover {\n    background-color: #2c3542; }\n", ""]);
 
 	// exports
 
@@ -40473,7 +40473,7 @@
 
 
 	// module
-	exports.push([module.id, "div.social-media-buttons {\n  float: right; }\n  div.social-media-buttons .fa {\n    float: left;\n    margin-left: 15px;\n    cursor: pointer;\n    border-radius: 5px;\n    padding: 10px 0;\n    font-size: 1.4em;\n    width: 42px;\n    text-align: center;\n    cursor: pointer; }\n    div.social-media-buttons .fa:hover {\n      background: #ECECEC; }\n    div.social-media-buttons .fa.fa-twitter {\n      color: #55acee; }\n    div.social-media-buttons .fa.fa-linkedin {\n      color: #0077b5; }\n    div.social-media-buttons .fa.fa-github {\n      color: black; }\n", ""]);
+	exports.push([module.id, "div.social-media-buttons {\n  float: right; }\n  div.social-media-buttons .fa {\n    float: left;\n    margin-left: 15px;\n    cursor: pointer;\n    border-radius: 5px;\n    padding: 10px 0;\n    font-size: 1.4em;\n    width: 42px;\n    text-align: center;\n    cursor: pointer;\n    color: #109BE3; }\n    div.social-media-buttons .fa:hover {\n      background: #2c3542; }\n", ""]);
 
 	// exports
 
