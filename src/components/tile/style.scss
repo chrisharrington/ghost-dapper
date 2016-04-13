@@ -1,0 +1,11 @@
+@import "src/variables";
+@import "src/mixins";
+
+div.tile {
+    padding:$spacing;
+    background:white;
+    @include shadow;
+    @include border-radius(3px);
+    width:100%;
+    @include border-box;
+}

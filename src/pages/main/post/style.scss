@@ -1,0 +1,72 @@
+@import "src/variables.scss";
+@import "src/mixins.scss";
+
+div.main-post {
+    float:left;
+    width:100%;
+    margin-top:$spacing*2;
+    border-top:solid 5px $secondary-colour;
+
+    &:first-child {
+        margin-top:0;
+    }
+
+    h2.title {
+        float:left;
+        margin:0;
+        padding:0;
+        font-family:'San Francisco';
+        font-size:22px;
+
+        a {
+            color:black !important;
+        }
+    }
+
+    span.authour {
+        float:left;
+        margin-top:3px;
+        width:100%;
+        font-style:italic;
+        color:#AAA;
+        font-size:12px;
+    }
+
+    div.excerpt {
+        float:left;
+        width:100%;
+        margin-top:11px;
+        line-height:23px;
+        font-size:0.875em;
+
+        p:first-child {
+            margin-top:0;
+        }
+
+
+    }
+
+    a.read-more {
+        float:right;
+        margin-top:5px;
+        font-size:12px;
+        cursor:pointer;
+        padding:3px;
+
+        i {
+            margin-left:2px;
+        }
+    }
+
+    &.single {
+        a.read-more {
+            display:none;
+        }
+    }
+
+    &.multiple {
+        div.excerpt>:last-child:after {
+            content:"...";
+        }
+    }
+}

@@ -21,31 +21,39 @@
 
     <div id="site-container"></div>
 
-    <!-- <div class="site-wrapper">
-
-        {{{body}}}
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
-
-    </div> -->
-
     <script type="text/javascript">
         var posts = [];
-        {{#foreach posts}}
-            posts.push({
-                url: "{{url}}",
-                title: "{{title}}",
-                excerpt: "{{excerpt words="26"}}...",
-                authour: {
-                    image: "{{author.image}}",
-                    name: "{{author.name}}"
-                },
-                date: "{{date format="DD MMMM YYYY"}}"
-            });
-        {{/foreach}}
+        {{#is "post"}}
+            {{#post}}
+                posts.push({
+                    url: "{{url}}",
+                    title: "{{title}}",
+                    excerpt: "{{excerpt words="26"}}...",
+                    content: `{{content}}`,
+                    authour: {
+                        image: "{{author.image}}",
+                        name: "{{author.name}}"
+                    },
+                    date: "{{date format="DD MMMM YYYY"}}"
+                })
+            {{/post}}
+        {{else}}
+            {{#get "posts" include="author"}}
+                {{#foreach posts}}
+                    posts.push({
+                        url: "{{url}}",
+                        title: "{{title}}",
+                        excerpt: "{{excerpt words="26"}}...",
+                        content: `{{content words="250"}}`,
+                        authour: {
+                            image: "{{author.image}}",
+                            name: "{{author.name}}"
+                        },
+                        date: "{{date format="DD MMMM YYYY"}}"
+                    });
+                {{/foreach}}
+            {{/get}}
+        {{/is}}
     </script>
 
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>

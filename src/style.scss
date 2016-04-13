@@ -10,5 +10,16 @@ div.wrapper {
 main {
     float:left;
     width:calc(100% - #{$sidebar-width});
-    background:#222933;
+    background:#E0E0E0;
+    padding:$spacing*2;
+    @include border-box;
+
+    a {
+        color:$secondary-colour;
+        text-decoration:none;
+
+        &:hover {
+            color:darken($secondary-colour, 15%);
+        }
+    }
 }

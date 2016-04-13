@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router, Route, Link, browserHistory } from 'react-router';
 
 import Sidebar from "./sidebar";
 import Header from "./header";
+
+import Main from "./pages/main";
 
 import "./mixins.scss";
 import "./style.scss";
@@ -13,7 +16,7 @@ class Index extends React.Component {
             <Header />
             <Sidebar />
             <main>
-
+                {posts.length > 0 ? <Main posts={posts} /> : <Main posts={posts} />}
             </main>
         </div>;
     }

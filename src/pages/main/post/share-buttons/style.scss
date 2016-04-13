@@ -1,0 +1,50 @@
+@import "src/variables.scss";
+@import "src/mixins.scss";
+
+div.share-buttons {
+    float:right;
+
+    $button-size:28px;
+
+    div.share-button {
+        float:left;
+        width:$button-size;
+        height:$button-size;
+        @include border-radius(3px);
+        cursor:pointer;
+        text-align:center;
+        margin-left:5px;
+        color:white;
+
+        i {
+            font-size:22px;
+            margin-top:4px;
+        }
+
+        &.twitter-button {
+            background:$twitter-blue;
+            color:white;
+        }
+
+        &.linkedin-button {
+            background:$linkedin-blue;
+        }
+
+        &.google-plus-button {
+            background:$google-plus-red;
+
+            i {
+                font-size:16px;
+                margin-top:7px;
+            }
+        }
+
+        &.facebook-button {
+            background:$facebook-blue;
+        }
+
+        &.reddit-button {
+            background:$reddit-blue;
+        }
+    }
+}
