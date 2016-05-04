@@ -70,9 +70,9 @@
 
 	var _main2 = _interopRequireDefault(_main);
 
-	__webpack_require__(370);
+	__webpack_require__(373);
 
-	__webpack_require__(372);
+	__webpack_require__(375);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25246,7 +25246,7 @@
 	    _createClass(RecentArticles, [{
 	        key: "render",
 	        value: function render() {
-	            var topFivePosts = _lodash2.default.take(posts, 5);
+	            var topFivePosts = _lodash2.default.take(allPosts, 5);
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "sidebar-component recent-articles" },
@@ -45832,7 +45832,7 @@
 
 	var _post2 = _interopRequireDefault(_post);
 
-	__webpack_require__(368);
+	__webpack_require__(371);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45892,11 +45892,11 @@
 
 	var _tile2 = _interopRequireDefault(_tile);
 
-	var _shareButtons = __webpack_require__(374);
+	var _shareButtons = __webpack_require__(366);
 
 	var _shareButtons2 = _interopRequireDefault(_shareButtons);
 
-	__webpack_require__(366);
+	__webpack_require__(369);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46053,166 +46053,6 @@
 /* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(367);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(324)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 367 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(323)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.main-post {\n  float: left;\n  width: 100%;\n  margin-top: 30px;\n  border-top: solid 5px #109BE3; }\n  div.main-post:first-child {\n    margin-top: 0; }\n  div.main-post h2.title {\n    float: left;\n    margin: 0;\n    padding: 0;\n    font-family: 'San Francisco';\n    font-size: 22px; }\n    div.main-post h2.title a {\n      color: black !important; }\n  div.main-post span.authour {\n    float: left;\n    margin-top: 3px;\n    width: 100%;\n    font-style: italic;\n    color: #AAA;\n    font-size: 12px; }\n  div.main-post div.excerpt {\n    float: left;\n    width: 100%;\n    margin-top: 11px;\n    line-height: 23px;\n    font-size: 0.875em; }\n    div.main-post div.excerpt p:first-child {\n      margin-top: 0; }\n  div.main-post a.read-more {\n    float: right;\n    margin-top: 5px;\n    font-size: 12px;\n    cursor: pointer;\n    padding: 3px; }\n    div.main-post a.read-more i {\n      margin-left: 2px; }\n  div.main-post.single a.read-more {\n    display: none; }\n  div.main-post.multiple div.excerpt > :last-child:after {\n    content: \"...\"; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 368 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(369);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(324)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 369 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(323)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "", ""]);
-
-	// exports
-
-
-/***/ },
-/* 370 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(371);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(324)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./mixins.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./mixins.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 371 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(323)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".hidden {\n  display: none; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 372 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(373);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(324)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 373 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(323)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.wrapper {\n  width: 100%;\n  background: white;\n  height: 100%; }\n\nmain {\n  float: left;\n  width: calc(100% - 400px);\n  background: #E0E0E0;\n  padding: 30px;\n  box-sizing: border-box; }\n  main a {\n    color: #109BE3;\n    text-decoration: none; }\n    main a:hover {\n      color: #0b6a9c; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 374 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -46225,7 +46065,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(375);
+	__webpack_require__(367);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46286,13 +46126,13 @@
 	;
 
 /***/ },
-/* 375 */
+/* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(376);
+	var content = __webpack_require__(368);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46312,7 +46152,7 @@
 	}
 
 /***/ },
-/* 376 */
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
@@ -46321,6 +46161,166 @@
 
 	// module
 	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.share-buttons {\n  float: right; }\n  div.share-buttons div.share-button {\n    float: left;\n    width: 28px;\n    height: 28px;\n    border-radius: 3px;\n    cursor: pointer;\n    text-align: center;\n    margin-left: 5px;\n    color: white; }\n    div.share-buttons div.share-button i {\n      font-size: 22px;\n      margin-top: 4px; }\n    div.share-buttons div.share-button.twitter-button {\n      background: #55acee;\n      color: white; }\n    div.share-buttons div.share-button.linkedin-button {\n      background: #0077b5; }\n    div.share-buttons div.share-button.google-plus-button {\n      background: #d34836; }\n      div.share-buttons div.share-button.google-plus-button i {\n        font-size: 16px;\n        margin-top: 7px; }\n    div.share-buttons div.share-button.facebook-button {\n      background: #3b5998; }\n    div.share-buttons div.share-button.reddit-button {\n      background: #679cc7; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(370);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(324)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 370 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(323)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.main-post {\n  float: left;\n  width: 100%;\n  margin-top: 30px;\n  border-top: solid 5px #109BE3; }\n  div.main-post:first-child {\n    margin-top: 0; }\n  div.main-post h2.title {\n    float: left;\n    margin: 0;\n    padding: 0;\n    font-family: 'San Francisco';\n    font-size: 22px; }\n    div.main-post h2.title a {\n      color: black !important; }\n  div.main-post span.authour {\n    float: left;\n    margin-top: 3px;\n    width: 100%;\n    font-style: italic;\n    color: #AAA;\n    font-size: 12px; }\n  div.main-post div.excerpt {\n    float: left;\n    width: 100%;\n    margin-top: 11px;\n    line-height: 23px;\n    font-size: 0.875em; }\n    div.main-post div.excerpt p:first-child {\n      margin-top: 0; }\n  div.main-post a.read-more {\n    float: right;\n    margin-top: 5px;\n    font-size: 12px;\n    cursor: pointer;\n    padding: 3px; }\n    div.main-post a.read-more i {\n      margin-left: 2px; }\n  div.main-post.single a.read-more {\n    display: none; }\n  div.main-post.multiple div.excerpt > :last-child:after {\n    content: \"...\"; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 371 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(372);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(324)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 372 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(323)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 373 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(374);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(324)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./mixins.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./mixins.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 374 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(323)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".hidden {\n  display: none; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 375 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(376);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(324)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./style.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 376 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(323)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.wrapper {\n  width: 100%;\n  background: white;\n  height: 100%; }\n\nmain {\n  float: left;\n  width: calc(100% - 400px);\n  background: #E0E0E0;\n  padding: 15px;\n  box-sizing: border-box; }\n  main a {\n    color: #109BE3;\n    text-decoration: none; }\n    main a:hover {\n      color: #0b6a9c; }\n", ""]);
 
 	// exports
 

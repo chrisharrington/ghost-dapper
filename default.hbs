@@ -22,7 +22,25 @@
     <div id="site-container"></div>
 
     <script type="text/javascript">
-        var posts = [];
+        var posts = [],
+            allPosts = [];
+
+        {{#get "posts" include="author"}}
+            {{#foreach posts}}
+                allPosts.push({
+                    url: "{{url}}",
+                    title: "{{title}}",
+                    excerpt: "{{excerpt words="26"}}...",
+                    content: `{{content words="250"}}`,
+                    authour: {
+                        image: "{{author.image}}",
+                        name: "{{author.name}}"
+                    },
+                    date: "{{date format="DD MMMM YYYY"}}"
+                });
+            {{/foreach}}
+        {{/get}}
+
         {{#is "post"}}
             {{#post}}
                 posts.push({
@@ -38,21 +56,7 @@
                 })
             {{/post}}
         {{else}}
-            {{#get "posts" include="author"}}
-                {{#foreach posts}}
-                    posts.push({
-                        url: "{{url}}",
-                        title: "{{title}}",
-                        excerpt: "{{excerpt words="26"}}...",
-                        content: `{{content words="250"}}`,
-                        authour: {
-                            image: "{{author.image}}",
-                            name: "{{author.name}}"
-                        },
-                        date: "{{date format="DD MMMM YYYY"}}"
-                    });
-                {{/foreach}}
-            {{/get}}
+            posts = allPosts.slice();
         {{/is}}
     </script>
 
