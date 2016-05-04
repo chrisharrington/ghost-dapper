@@ -1,5 +1,4 @@
 import React from "react";
-import _ from "lodash";
 
 import Tweet from "./tweet";
 
@@ -7,9 +6,9 @@ import "./style.scss";
 
 export default class Tweets extends React.Component {
     render() {
-        var tweets = _.take(this.props.tweets, 5);
+        var tweets = this.props.tweets.slice(0, 5);
         return <div className="tweets">
-            {_.map(tweets, (tweet, i) => <Tweet key={i} tweet={tweet} />)}
+            {tweets.map((tweet, i) => <Tweet key={i} tweet={tweet} />)}
         </div>;
     }
 };

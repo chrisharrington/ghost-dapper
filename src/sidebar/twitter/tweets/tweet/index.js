@@ -1,6 +1,4 @@
 import React from "react";
-import _ from "lodash";
-import FontAwesome from "react-fontawesome";
 import moment from "moment";
 
 import "./style.scss";
@@ -12,11 +10,11 @@ export default class Tweets extends React.Component {
             <span className="content">{tweet.html}</span>
             <div className="counts">
                 <div className="icon">
-                    <FontAwesome name="retweet" />
+                    <i className="fa fa-retweet" />
                     <span className="count">{tweet.retweets}</span>
                 </div>
                 <div className="icon">
-                    <FontAwesome name="heart" />
+                    <i className="fa fa-heart" />
                     <span className="count">{tweet.favourites}</span>
                 </div>
             </div>

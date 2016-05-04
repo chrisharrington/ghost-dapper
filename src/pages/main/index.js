@@ -12,6 +12,9 @@ export default class Main extends React.Component {
     };
 
     componentDidMount() {
+        if (!postId)
+            return;
+
         fetch(ghost.url.api("posts/" + postId, { include: "author" })).then(function(result) {
             return result.json();
         }).then(function(json) {
@@ -41,7 +44,7 @@ export default class Main extends React.Component {
         if (isSingle)
             return this.renderSingle();
         return <div className="main">
-            {_.map(this.props.posts, (p, i) => <Post key={i} isSingle={postId !== undefined} post={p} />)}
+            {this.props.posts.map((p, i) => <Post key={i} isSingle={postId !== undefined} post={p} />)}
         </div>;
     };
 
