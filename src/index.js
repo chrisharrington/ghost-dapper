@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, Link, browserHistory } from 'react-router';
 
 import Sidebar from "./sidebar";
 import Header from "./header";
 
 import Main from "./pages/main";
+
+import "whatwg-fetch";
 
 import "./mixins.scss";
 import "./style.scss";

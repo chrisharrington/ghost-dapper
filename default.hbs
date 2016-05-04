@@ -34,11 +34,11 @@
 
     <script type="text/javascript">
         var posts = [],
-            allPosts = [];
+            postId;
 
         {{#get "posts" include="author"}}
             {{#foreach posts}}
-                allPosts.push({
+                posts.push({
                     url: "{{url}}",
                     permalink: document.documentURI + "{{url}}".substring(1),
                     title: "{{title}}",
@@ -55,17 +55,7 @@
 
         {{#is "post"}}
             {{#post}}
-                posts.push({
-                    url: "{{url}}",
-                    title: "{{title}}",
-                    excerpt: "{{excerpt words="26"}}...",
-                    content: `{{content}}`,
-                    authour: {
-                        image: "{{author.image}}",
-                        name: "{{author.name}}"
-                    },
-                    date: "{{date format="DD MMMM YYYY"}}"
-                })
+                postId = {{id}};
             {{/post}}
         {{else}}
             posts = allPosts.slice();
