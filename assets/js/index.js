@@ -34245,7 +34245,7 @@
 	            var article = this.props.article;
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "article sidebar-selectable" },
+	                { className: "article sidebar-selectable", onClick: this.navigate.bind(this) },
 	                _react2.default.createElement(
 	                    "span",
 	                    { className: "title" },
@@ -34271,6 +34271,11 @@
 	                    )
 	                )
 	            );
+	        }
+	    }, {
+	        key: "navigate",
+	        value: function navigate() {
+	            window.location.href = this.props.article.url;
 	        }
 	    }]);
 
@@ -45549,9 +45554,14 @@
 	            return _react2.default.createElement(
 	                "header",
 	                null,
-	                _react2.default.createElement(_logo2.default, null),
+	                _react2.default.createElement(_logo2.default, { onClick: this.navigateHome.bind(this) }),
 	                _react2.default.createElement(_socialMediaButtons2.default, null)
 	            );
+	        }
+	    }, {
+	        key: "navigateHome",
+	        value: function navigateHome() {
+	            window.location.href = "/";
 	        }
 	    }]);
 
@@ -45601,7 +45611,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                { className: "logo" },
+	                { className: "logo", onClick: this.props.onClick },
 	                _react2.default.createElement(
 	                    "span",
 	                    { className: "first" },
@@ -45657,7 +45667,7 @@
 
 
 	// module
-	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.logo {\n  float: left; }\n  div.logo span {\n    float: left;\n    font-size: 32px;\n    text-transform: uppercase;\n    font-weight: bold; }\n    div.logo span.first {\n      color: #109BE3; }\n", ""]);
+	exports.push([module.id, ".hidden {\n  display: none; }\n\ndiv.logo {\n  float: left;\n  cursor: pointer; }\n  div.logo span {\n    float: left;\n    font-size: 32px;\n    text-transform: uppercase;\n    font-weight: bold; }\n    div.logo span.first {\n      color: #109BE3; }\n", ""]);
 
 	// exports
 

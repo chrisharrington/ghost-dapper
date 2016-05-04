@@ -8,8 +8,12 @@ import "./style.scss";
 export default class Header extends React.Component {
     render() {
         return <header>
-            <Logo />
+            <Logo onClick={this.navigateHome.bind(this)} />
             <SocialMediaButtons />
         </header>;
+    };
+
+    navigateHome() {
+        window.location.href = "/";
     }
 };

@@ -1,5 +1,6 @@
 var path = require("path"),
-    webpack = require("webpack");
+    webpack = require("webpack"),
+    LiveReloadPlugin = require("webpack-livereload-plugin");
 
 var dist = "assets/js";
 
@@ -20,5 +21,8 @@ module.exports = {
     },
     resolve: {
         root: [path.join(__dirname, "node_modules"), path.join(__dirname, "src"), path.join(__dirname, "assets")]
-    }
+    },
+    plugins: [
+        new LiveReloadPlugin()
+    ]
 };
