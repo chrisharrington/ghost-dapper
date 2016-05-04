@@ -70,9 +70,9 @@
 
 	var _main2 = _interopRequireDefault(_main);
 
-	__webpack_require__(373);
+	__webpack_require__(374);
 
-	__webpack_require__(375);
+	__webpack_require__(376);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44606,7 +44606,8 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-		"serviceLocation": "http://130.211.172.19:8081/"
+		"serviceLocation": "http://130.211.172.19:8081/",
+		"facebookAppId": "1412237962402533"
 	};
 
 /***/ },
@@ -45842,7 +45843,7 @@
 
 	var _post2 = _interopRequireDefault(_post);
 
-	__webpack_require__(371);
+	__webpack_require__(372);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45906,7 +45907,7 @@
 
 	var _shareButtons2 = _interopRequireDefault(_shareButtons);
 
-	__webpack_require__(369);
+	__webpack_require__(370);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46066,7 +46067,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -46075,7 +46076,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(367);
+	var _popup = __webpack_require__(367);
+
+	var _popup2 = _interopRequireDefault(_popup);
+
+	var _config = __webpack_require__(329);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	__webpack_require__(368);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46086,50 +46095,86 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var ShareButtons = function (_React$Component) {
-	    _inherits(ShareButtons, _React$Component);
+		_inherits(ShareButtons, _React$Component);
 
-	    function ShareButtons() {
-	        _classCallCheck(this, ShareButtons);
+		function ShareButtons() {
+			_classCallCheck(this, ShareButtons);
 
-	        return _possibleConstructorReturn(this, Object.getPrototypeOf(ShareButtons).apply(this, arguments));
-	    }
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(ShareButtons).apply(this, arguments));
+		}
 
-	    _createClass(ShareButtons, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "share-buttons" },
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "share-button twitter-button" },
-	                    _react2.default.createElement("i", { className: "fa fa-twitter" })
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "share-button linkedin-button" },
-	                    _react2.default.createElement("i", { className: "fa fa-linkedin" })
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "share-button google-plus-button" },
-	                    _react2.default.createElement("i", { className: "fa fa-google-plus" })
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "share-button facebook-button" },
-	                    _react2.default.createElement("i", { className: "fa fa-facebook" })
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "share-button reddit-button" },
-	                    _react2.default.createElement("i", { className: "fa fa-reddit-alien" })
-	                )
-	            );
-	        }
-	    }]);
+		_createClass(ShareButtons, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					{ className: "share-buttons" },
+					_react2.default.createElement(
+						"div",
+						{ className: "share-button twitter-button", onClick: this.twitter.bind(this) },
+						_react2.default.createElement("i", { className: "fa fa-twitter" })
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "share-button linkedin-button", onClick: this.linkedin.bind(this) },
+						_react2.default.createElement("i", { className: "fa fa-linkedin" })
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "share-button google-plus-button", onClick: this.googleplus.bind(this) },
+						_react2.default.createElement("i", { className: "fa fa-google-plus" })
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "share-button facebook-button", onClick: this.facebook.bind(this) },
+						_react2.default.createElement("i", { className: "fa fa-facebook" })
+					)
+				);
+			}
+		}, {
+			key: "event",
+			value: function event(label) {
+				if (typeof ga !== "undefined") ga("send", "event", "social", label);
+			}
+		}, {
+			key: "twitter",
+			value: function twitter() {
+				this.event("twitter");
+				_popup2.default.centre("https://twitter.com/intent/tweet?text=" + this.props.post.title + " " + this.props.post.permalink + " via @charrington99", "twitter", {
+					width: 600,
+					height: 300
+				});
+			}
+		}, {
+			key: "facebook",
+			value: function facebook() {
+				this.event("facebook");
+				_popup2.default.centre("https://www.facebook.com/dialog/share?app_id=" + _config2.default.facebookAppId + "&display=popup&href=" + this.props.post.permalink + "&redirect_uri=" + this.props.post.permalink, "facebook", {
+					width: 600,
+					height: 400
+				});
+			}
+		}, {
+			key: "googleplus",
+			value: function googleplus() {
+				this.event("googleplus");
+				_popup2.default.centre("https://plus.google.com/share?url=" + this.props.post.permalink, "googleplus", {
+					width: 510,
+					height: 420
+				});
+			}
+		}, {
+			key: "linkedin",
+			value: function linkedin() {
+				this.event("linkedin");
+				_popup2.default.centre("https://www.linkedin.com/cws/share?url=" + this.props.post.permalink, "linkedin", {
+					width: 600,
+					height: 400
+				});
+			}
+		}]);
 
-	    return ShareButtons;
+		return ShareButtons;
 	}(_react2.default.Component);
 
 	exports.default = ShareButtons;
@@ -46137,12 +46182,35 @@
 
 /***/ },
 /* 367 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = new function () {
+		this.centre = function (url, name, options) {
+			options.width = options.width || 600;
+			options.height = options.height || 400;
+			options.left = window.innerWidth / 2 - options.width / 2;
+			options.top = window.innerHeight / 2 - options.height / 2;
+			window.open(url, name, _buildParametersFromOptions(options));
+		};
+
+		function _buildParametersFromOptions(options) {
+			var str = "";
+			for (var name in options) {
+				str += name + "=" + options[name] + ",";
+			}return str.substring(0, str.length - 1);
+		}
+	}();
+
+/***/ },
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(368);
+	var content = __webpack_require__(369);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46162,7 +46230,7 @@
 	}
 
 /***/ },
-/* 368 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
@@ -46176,13 +46244,13 @@
 
 
 /***/ },
-/* 369 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(370);
+	var content = __webpack_require__(371);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46202,7 +46270,7 @@
 	}
 
 /***/ },
-/* 370 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
@@ -46216,13 +46284,13 @@
 
 
 /***/ },
-/* 371 */
+/* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(372);
+	var content = __webpack_require__(373);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46242,7 +46310,7 @@
 	}
 
 /***/ },
-/* 372 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
@@ -46256,13 +46324,13 @@
 
 
 /***/ },
-/* 373 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(374);
+	var content = __webpack_require__(375);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46282,7 +46350,7 @@
 	}
 
 /***/ },
-/* 374 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
@@ -46296,13 +46364,13 @@
 
 
 /***/ },
-/* 375 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(376);
+	var content = __webpack_require__(377);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(324)(content, {});
@@ -46322,7 +46390,7 @@
 	}
 
 /***/ },
-/* 376 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(323)();
